@@ -47,8 +47,8 @@
         MineSmart Flood Sentinel uses AI and Copernicus satellite data to predict floods and mudslides early — and turn risk into clear action.
       </p>
       <div class="mt-10 flex gap-4">
-        <a href="#contact" class="px-12 py-4 rounded-full bg-orange-500 text-white font-semibold shadow-lg hover:scale-105 transition">Signin</a>
-        <a href="#solution" class="px-12 py-4 rounded-full border border-slate-300 hover:bg-white transition">Register</a>
+        <a href="<?php echo ROOT_URL; ?>/auth/login" class="px-12 py-4 rounded-full bg-orange-500 text-white font-semibold shadow-lg hover:scale-105 transition">Signin</a>
+        <a href="<?php echo ROOT_URL; ?>/auth/register" class="px-12 py-4 rounded-full border border-slate-300 hover:bg-white transition">Register</a>
       </div>
     </div>
     <div class="relative">

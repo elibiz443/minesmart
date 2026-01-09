@@ -18,16 +18,16 @@ Setting up DB:
 - seed db: http://localhost/minesmart/db/db-setup.php
 - For production: https://minesmart/db/db-setup.php
 
-Populate notifications:
+Populate alerts:
 
 * Localhost:
 ```
-http://localhost/minesmart/db/populate_notifications.php
+http://localhost/minesmart/db/populate_alerts.php
 ```
 
 * production:
 ```
-https://minesmart/db/populate_notifications.php
+https://minesmart/db/populate_alerts.php
 ```
 
 Adding mailer:
