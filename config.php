@@ -16,9 +16,9 @@
 
     // Production DB credentials
     $host = 'localhost';
-    $dbname = 'javancoc_minesmart';
-    $username = 'javancoc_minesmart';
-    $password = 'cKb9sny8jpM5HBm6EyRe';
+    $dbname = 'riverba1_minesmart';
+    $username = 'riverba1_minesmart';
+    $password = 'GjBFNkgNExVBSQ58gJdf';
 
     // Define ROOT_PATH for production using __DIR__
     define('ROOT_PATH', dirname(__FILE__));
