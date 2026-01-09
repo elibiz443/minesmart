@@ -16,7 +16,7 @@ Setting up DB:
 - Go To: http://localhost/phpmyadmin
 - DB Name(eg: minesmart_db)
 - seed db: http://localhost/minesmart/db/db-setup.php
-- For production: https://minesmart/db/db-setup.php
+- For production: https://f2.riverbarncafe.com/db/db-setup.php
 
 Populate alerts:
 

@@ -27,7 +27,7 @@
     <link rel="icon" type="image/x-icon" href="<?php echo ROOT_URL; ?>/assets/images/favicon.webp" />
   </head>
 
-  <body class="bg-gray-100 text-gray-800 max-w-full overflow-x-hidden" style="background-image: url('<?php echo ROOT_URL; ?>/assets/images/9.webp');">
+  <body class="bg-gray-100 text-gray-800 max-w-full overflow-x-hidden" style="background-image: url('<?php echo ROOT_URL; ?>/assets/images/dashboard.webp');">
     <?php include '../includes/sidebar.php'; ?>
     <?php require __DIR__ . '/../includes/message.php'; ?>
 
@@ -36,8 +36,8 @@
 
       <div class="overflow-y-auto p-8 flex-grow pt-18">
         <div class="mb-2">
-          <h1 class="text-2xl font-bold text-slate-800">Overview</h1>
-          <p class="text-slate-500 text-sm mt-1">We reduce bond risk and inspection cost by producing audit-grade, time-stamped evidence packs and automated non-compliance alerts.</p>
+          <h1 class="text-2xl font-bold text-slate-100">Overview</h1>
+          <p class="text-slate-200 text-sm mt-1">We reduce bond risk and inspection cost by producing audit-grade, time-stamped evidence packs and automated non-compliance alerts.</p>
         </div>
 
         <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
@@ -65,21 +65,34 @@
 
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-8">
           <div class="lg:col-span-7 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-            <h3 class="text-lg font-bold text-slate-800 mb-6">Site Locations</h3>
-            <div class="relative bg-slate-50 rounded-lg h-[400px] flex flex-col items-center justify-center border border-gray-100">
-              <div class="flex flex-col items-center">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
-                  <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                </div>
-                <p class="text-slate-600 font-medium">10 sites across Kenya</p>
-                <button class="cursor-pointer mt-4 px-6 py-2 bg-teal-500 hover:bg-teal-700 text-white font-semibold rounded-md transition-all duration-300 ease-in-out">
-                  View Map
-                </button>
-              </div>
-            </div>
-          </div>
+  <h3 class="text-lg font-bold text-slate-800 mb-6">Site Locations</h3>
+  <div class="relative overflow-hidden rounded-lg h-[400px] flex flex-col items-center justify-center border border-gray-100">
+    <div class="absolute inset-0 z-0">
+      <iframe 
+        width="100%" 
+        height="100%" 
+        frameborder="0" 
+        style="border:0; filter: grayscale(0.1) contrast(1.1);" 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.1636377114!2d36.76431103758129!3d-1.303208953110905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1704810000000!5m2!1sen!2ske" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center bg-white/60 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/50">
+      <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+        <svg class="w-6 h-6 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </div>
+      <p class="text-slate-900 font-extrabold">Sites across Kenya</p>
+      <button onclick="location.href='<?php echo ROOT_URL; ?>/sites'" class="cursor-pointer mt-4 px-6 py-2 bg-teal-600 hover:bg-teal-800 text-white font-semibold rounded-md shadow-md transition-all duration-300 ease-in-out">
+        View Full Map
+      </button>
+    </div>
+  </div>
+</div>
 
           <div class="lg:col-span-5 bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col">
             <h3 class="text-lg font-bold text-slate-800 mb-6">Priority Inspection Queue</h3>

@@ -7,3 +7,7 @@ RewriteBase /minesmart/
 RewriteRule ^auth/register$ app/views/auth/register.php [L]
 RewriteRule ^auth/login$ app/views/auth/login.php [L]
 RewriteRule ^dashboard$ app/views/dashboard/index.php [L]
+
+
+RewriteRule ^sites$ app/views/sites/index.php [L]
+RewriteRule ^alerts$ app/views/alerts/index.php [L]

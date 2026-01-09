@@ -31,3 +31,67 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
 }
+
+/* Override Mapbox default popup styles */
+/*mapbox*/
+.mapboxgl-popup {
+  z-index: 80 !important;
+}
+
+.mapboxgl-popup-content {
+  background: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.mapboxgl-popup-tip {
+  display: none !important;
+}
+
+/* Optional: Adjust the max-width of the popup */
+.mapboxgl-popup-content-wrapper {
+  max-width: none !important;
+  width: auto !important;
+}
+
+/* Custom style for the Mapbox popup close button */
+.mapboxgl-popup-close-button {
+  width: 2.5em !important;
+  height: 2.5em !important;
+  padding: 0 !important;
+  background: transparent !important;
+  position: relative;
+  outline: none;
+  border-radius: 50% !important;
+  margin-right: -4.5rem !important;
+  margin-top: 0.4rem !important;
+}
+
+.mapboxgl-popup-close-button::before {
+  content: "\2716";
+  font-size: 1.8em !important;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: red !important;
+}
+
+.mapboxgl-control-container {
+  z-index: 90!important;
+  position: relative !important;
+}
+
+.mapboxgl-ctrl-top-right {
+  top: unset !important;
+  right: unset !important;
+  top: 1rem !important;
+  right: 13rem !important;
+  position: absolute !important;
+  z-index: 80 !important;
+}

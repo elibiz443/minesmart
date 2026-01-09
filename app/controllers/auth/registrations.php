@@ -3,19 +3,16 @@
   require __DIR__ . '/../../../config.php';
 
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Collect form data
     $fullName = $_POST['full_name'] ?? '';
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';
-    $role = $_POST['role'] ?? 'operator';
+    $role = $_POST['role'] ?? 'guest';
     $password = $_POST['password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
     $status = $_POST['status'] ?? 'pending';
 
-    // Initialize errors array
     $errors = [];
 
-    // Validation
     if (empty($fullName)) $errors[] = 'Full Name is required.';
     if (empty($username)) $errors[] = 'Username is required.';
     if (empty($email)) $errors[] = 'Email is required.';
@@ -23,7 +20,6 @@
     if (empty($password)) $errors[] = 'Password is required.';
     if ($password !== $confirm_password) $errors[] = 'Passwords do not match.';
 
-    // Check for uniqueness of username & email
     try {
       $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE username = :username");
       $stmt->execute([':username' => $username]);
@@ -33,12 +29,11 @@
       $stmt->execute([':email' => $email]);
       if ($stmt->fetchColumn()) $errors[] = 'Email is already taken.';
     } catch (PDOException $e) {
-      $_SESSION['message'] = ['type' => 'error', 'text' => "Error checking uniqueness: " . $e->getMessage()];
+      $_SESSION['message'] = ['type' => 'error', 'text' => "Uniqueness check failed: " . $e->getMessage()];
       header("Location: " . ROOT_URL . "/auth/register");
       exit;
     }
 
-    // If there are validation errors, store them in session and redirect
     if (!empty($errors)) {
       $_SESSION['message'] = ['type' => 'error', 'text' => implode(' ', $errors)];
       header("Location: " . ROOT_URL . "/auth/register");
@@ -46,24 +41,21 @@
     }
 
     try {
-      // Hash the password
       $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-      // Insert the user into the database
-      $query = "INSERT INTO users (full_name, username, email, product_key, role, company_id, grant_access_to_creator, password, creator_id, status, plan)
-                VALUES (:full_name, :username, :email, :product_key, :role, :company_id, :grant_access_to_creator, :password, :creator_id, :status, :plan)";
+      $query = "INSERT INTO users (full_name, username, role, status, email, password)
+                VALUES (:full_name, :username, :role, :status, :email, :password)";
+      
       $stmt = $pdo->prepare($query);
       $stmt->execute([
         ':full_name' => $fullName,
-        ':username' => $username,
-        ':email' => $email,
-        ':role' => $role,
-        ':password' => $hashed_password,
-        ':creator_id' => $creator_id,
-        ':status' => $status,
+        ':username'  => $username,
+        ':role'      => $role,
+        ':status'    => $status,
+        ':email'     => $email,
+        ':password'  => $hashed_password,
       ]);
 
-      // Retrieve the newly registered user
       $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
       $stmt->execute([':email' => $email]);
       $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +67,7 @@
         header("Location: " . ROOT_URL . "/dashboard");
         exit;
       } else {
-        throw new Exception("Failed to retrieve user after registration.");
+        throw new Exception("User retrieval failed.");
       }
     } catch (Exception $e) {
       $_SESSION['message'] = ['type' => 'error', 'text' => "Registration error: " . $e->getMessage()];
