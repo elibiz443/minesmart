@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Rewrite base to your project folder if it's not the root
+RewriteBase /minesmart/
+
+# Remove .php extension for pages
+RewriteRule ^plans/gold$ app/views/plans/gold.php [L]
+RewriteRule ^auth/register$ app/views/auth/register.php [L]
+RewriteRule ^auth/login$ app/views/auth/login.php [L]
+RewriteRule ^plans/payment$ app/views/plans/payment.php [L]
+RewriteRule ^privacy-policy$ pages/privacy-policy.php [L]
+RewriteRule ^terms-and-conditions$ pages/terms-and-conditions.php [L]
