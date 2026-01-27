@@ -6,7 +6,7 @@
   $unreadCount = (int) $unreadStmt->fetchColumn();
 ?>
 
-<header id="headerContent" class="fixed z-[999] w-[calc(100%-12rem)] ml-auto glass-bg-color border-b border-slate-600 py-1.5 px-5 flex justify-between items-center text-white transition-all duration-500 ease-in-out transform translate-y-0 opacity-100">
+<header id="headerContent" class="fixed z-[9999] w-[calc(100%-12rem)] ml-auto glass-bg-color border-b border-slate-600 py-1.5 px-5 flex justify-between items-center text-white transition-all duration-500 ease-in-out transform translate-y-0 opacity-100">
   <div id="welcomeMessage" class="text-sm md:text-md leading-tight pl-2">
     Welcome, <span class="font-semibold text-teal-300"><?php echo htmlspecialchars($currentUser['full_name'] ?? 'Guest'); ?></span>
   </div>

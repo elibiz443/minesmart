@@ -11,3 +11,6 @@ RewriteRule ^dashboard$ app/views/dashboard/index.php [L]
 
 RewriteRule ^sites$ app/views/sites/index.php [L]
 RewriteRule ^alerts$ app/views/alerts/index.php [L]
+RewriteRule ^disaster-monitoring$ app/views/disaster-monitoring/index.php [L]
+RewriteRule ^rehabilitation$ app/views/rehabilitation/index.php [L]
+RewriteRule ^reports$ app/views/reports/index.php [L]

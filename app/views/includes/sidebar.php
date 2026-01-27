@@ -50,6 +50,16 @@
         </ul>
       </li>
 
+      <!-- disaster-monitoring -->
+      <li>
+        <button data-path="/app/views/disaster-monitoring" onclick="location.href='<?php echo ROOT_URL; ?>/disaster-monitoring'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor" class="mr-2">
+            <path d="M128 32l32 0c17.7 0 32 14.3 32 32l0 32L96 96l0-32c0-17.7 14.3-32 32-32zm64 96l0 320c0 17.7-14.3 32-32 32L32 480c-17.7 0-32-14.3-32-32l0-59.1c0-34.6 9.4-68.6 27.2-98.3C40.9 267.8 49.7 242.4 53 216L60.5 156c2-16 15.6-28 31.8-28l99.8 0zm227.8 0c16.1 0 29.8 12 31.8 28L459 216c3.3 26.4 12.1 51.8 25.8 74.6c17.8 29.7 27.2 63.7 27.2 98.3l0 59.1c0 17.7-14.3 32-32 32l-128 0c-17.7 0-32-14.3-32-32l0-320 99.8 0zM320 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 32-96 0 0-32zm-32 64l0 160-64 0 0-160 64 0z"/>
+          </svg>
+          <span>Monitoring</span>
+        </button>
+      </li>
+
       <!-- Sites -->
       <li>
         <button data-path="/app/views/sites" onclick="location.href='<?php echo ROOT_URL; ?>/sites'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
@@ -57,6 +67,16 @@
             <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
           </svg>
           <span>Sites</span>
+        </button>
+      </li>
+
+      <!-- rehabilitation -->
+      <li>
+        <button data-path="/app/views/rehabilitation" onclick="location.href='<?php echo ROOT_URL; ?>/rehabilitation'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor" class="mr-2">
+            <path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zm96 152c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 48 48 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-48 0 0 48c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-48-48 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l48 0 0-48z"/>
+          </svg>
+          <span>Rehabilitation</span>
         </button>
       </li>
 
@@ -72,11 +92,11 @@
 
       <!-- Evidence Packs -->
       <li>
-        <button onclick="location.href='<?php echo ROOT_URL; ?>/evidence'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
+        <button onclick="location.href='<?php echo ROOT_URL; ?>/reports'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16" fill="currentColor" class="mr-2">
             <path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/>
           </svg>
-          Evidence Packs
+          Reports
         </button>
       </li>
 
@@ -86,17 +106,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="16" height="16" fill="currentColor" class="mr-2">
             <path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16z"/>
           </svg>
-          <span>Inspector planner</span>
-        </button>
-      </li>
-
-      <!-- Analytics -->
-      <li>
-        <button onclick="location.href='<?php echo ROOT_URL; ?>/analytics'" class="sidebar-btn cursor-pointer w-full flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-slate-800 transition-all duration-500 ease-in-out">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor" class="mr-2">
-            <path d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm128-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM480 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z"/>
-          </svg>
-          <span>Analytics</span>
+          <span>Planner</span>
         </button>
       </li>
 

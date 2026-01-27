@@ -12,13 +12,13 @@
     // Define ROOT_PATH for local
     define('ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/minesmart');
   } else {
-    define('ROOT_URL', 'https://minesmart.javanco.co.ke');
+    define('ROOT_URL', 'https://minesmart.ezktech.com');
 
     // Production DB credentials
     $host = 'localhost';
-    $dbname = 'riverba1_minesmart';
-    $username = 'riverba1_minesmart';
-    $password = 'GjBFNkgNExVBSQ58gJdf';
+    $dbname = 'ezktech_minesmart';
+    $username = 'ezktech_minesmart';
+    $password = 'sKQM994DbYbkCzBgRCeM';
 
     // Define ROOT_PATH for production using __DIR__
     define('ROOT_PATH', dirname(__FILE__));
