@@ -8,9 +8,14 @@ body {
   box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
 
 .dancing-script { font-family: 'Dancing Script', serif; }
+
+.glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+.gradient-text { background: linear-gradient(to right, #38bdf8, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
 .glass-bg-color {
   backdrop-filter: blur(5px);
