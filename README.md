@@ -61,5 +61,5 @@ sudo chown -R daemon:daemon uploads
 
 Push to production:
 ```
-zip -r ../minesmart_production.zip . -x "uploads/*" -x ".htaccess" -x "*.DS_Store" -x "README.md" -x ".gitignore" -x ".git/*"
+zip -r ../minesmart_production.zip . -x "uploads/*" -x "*.DS_Store" -x "README.md" -x ".gitignore" -x ".git/*"
 ```
