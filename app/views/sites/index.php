@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="fixed z-[1000] top-[9rem] right-[7%] sm:right-[3rem]">
+        <div class="fixed z-[1001] top-[9rem] right-[7%] sm:right-[3rem]">
           <button id="toggleSites" class="cursor-pointer bg-orange-500 border border-white text-[0.625rem] px-1.5 py-1 font-bold text-white hover:scale-[106%] shadow-lg shadow-slate-800 rounded-full transition-all duration-500 ease-in-out">
             Hide Panel
           </button>
