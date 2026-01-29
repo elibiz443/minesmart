@@ -1,5 +1,5 @@
-<header id="main-header" class="fixed top-0 w-full z-[99999] border-b border-white/5 bg-[#0b1120]/80 backdrop-blur-md transition-all duration-300 ease-in-out">
-  <div id="header-container" class="max-w-7xl text-[0.7rem] mx-auto px-6 py-4 flex justify-between items-center transition-all duration-300 ease-in-out">
+<header id="main-header" class="fixed top-0 w-full z-[999] border-b border-white/5 bg-[#0b1120]/80 backdrop-blur-md transition-all duration-500 ease-in-out">
+  <div id="header-container" class="max-w-[96%] mx-auto py-4 flex justify-between items-center transition-all duration-500 ease-in-out">
     <div class="flex items-center gap-2">
       <img src="<?php echo ROOT_URL; ?>/assets/images/logo.webp" class="w-8 h-8 transition-all duration-500 ease-in-out" id="header-logo">
       <a href="<?php echo ROOT_URL; ?>" class="text-xl font-black tracking-tighter text-white uppercase hover:scale-110 transition-all duration-500 ease-in-out">
@@ -25,11 +25,11 @@
       </svg>
     </button>
   </div>
-
-  <div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
 </header>
 
-<aside id="sidebar" class="fixed z-[99999] top-0 left-0 h-full w-72 bg-[#0b1120] border-r border-white/10 -translate-x-full transition-all duration-500 ease-in-out shadow-2xl shadow-slate-800">
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] opacity-0 invisible transition-all duration-500 ease-in-out"></div>
+
+<aside id="sidebar" class="fixed z-[99999] top-0 left-0 h-full w-72 bg-[#0b1120] border-r border-white/10 -translate-x-full transition-all duration-700 ease-in-out shadow-2xl shadow-slate-800">
   <div class="p-6">
     <div class="flex justify-between items-center mb-10">
       <a href="<?php echo ROOT_URL; ?>" class="text-lg font-black tracking-tighter text-white uppercase hover:scale-110 transition-all duration-500 ease-in-out">

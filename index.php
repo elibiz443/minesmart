@@ -17,12 +17,15 @@
 <body class="bg-[#0b1120] text-slate-300 selection:bg-orange-500/30">
 
   <?php include './includes/header.php'; ?>
-  <?php include './includes/hero.php'; ?>
-  <?php include './includes/philosophy.php'; ?>
-  <?php include './includes/edge.php'; ?>
-  <?php include './includes/architecture.php'; ?>
-  <?php include './includes/advert.php'; ?>
-  <?php include './includes/footer.php'; ?>
+
+  <main class="min-h-screen">
+    <?php include './includes/hero.php'; ?>
+    <?php include './includes/philosophy.php'; ?>
+    <?php include './includes/edge.php'; ?>
+    <?php include './includes/architecture.php'; ?>
+    <?php include './includes/advert.php'; ?>
+    <?php include './includes/footer.php'; ?>
+  </main>
 
   <script src="<?php echo ROOT_URL; ?>/assets/js/header.js"></script>
   <script src="<?php echo ROOT_URL; ?>/assets/js/architecture.js"></script>

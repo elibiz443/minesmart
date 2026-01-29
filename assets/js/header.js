@@ -28,15 +28,20 @@ const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
 const toggleSidebar = () => {
   const isOpen = !sidebar.classList.contains('-translate-x-full');
+
   if (isOpen) {
     sidebar.classList.add('-translate-x-full');
+
     overlay.classList.add('opacity-0');
-    setTimeout(() => overlay.classList.add('hidden'), 300);
+    overlay.classList.add('invisible');
+
     document.body.style.overflow = '';
   } else {
-    overlay.classList.remove('hidden');
-    setTimeout(() => overlay.classList.remove('opacity-0'), 10);
     sidebar.classList.remove('-translate-x-full');
+
+    overlay.classList.remove('invisible');
+    overlay.classList.remove('opacity-0');
+
     document.body.style.overflow = 'hidden';
   }
 };
