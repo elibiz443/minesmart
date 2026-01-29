@@ -1,5 +1,5 @@
 <header id="main-header" class="fixed top-0 w-full z-[999] border-b border-white/5 bg-[#0b1120]/80 backdrop-blur-md transition-all duration-500 ease-in-out">
-  <div id="header-container" class="max-w-[96%] mx-auto py-4 flex justify-between items-center transition-all duration-500 ease-in-out">
+  <div id="header-container" class="max-w-[96%] mx-auto text-[0.7rem] py-4 flex justify-between items-center transition-all duration-500 ease-in-out">
     <div class="flex items-center gap-2">
       <img src="<?php echo ROOT_URL; ?>/assets/images/logo.webp" class="w-8 h-8 transition-all duration-500 ease-in-out" id="header-logo">
       <a href="<?php echo ROOT_URL; ?>" class="text-xl font-black tracking-tighter text-white uppercase hover:scale-110 transition-all duration-500 ease-in-out">
