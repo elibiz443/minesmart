@@ -27,7 +27,7 @@
 
     // Paths to your .sql files
     $sqlFiles = [
-      'users.sql', 'sites.sql', 'alerts.sql', 'site_monitoring.sql'
+      'users.sql', 'sites.sql', 'risk_engine_upgrade.sql'
     ];
 
     foreach ($sqlFiles as $file) {
